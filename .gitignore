@@ -1,0 +1,55 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / Editor
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.next/
+frontend/.env
+frontend/.env.local
+
+# ML artifacts (keep structure, ignore binaries by default — keep checked-in ones tracked explicitly)
+models/*.pkl
+models/*.joblib
+!models/.gitkeep
+
+# Data (keep checked-in samples; ignore generated bulk)
+data/*.parquet
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Database
+razorrecover.db
+*.sqlite
+*.sqlite3
+
+# Docker
+docker-compose.override.yml
