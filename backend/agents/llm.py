@@ -1,22 +1,4 @@
-"""LLM provider abstraction.
 
-A single, minimal interface (``LLMProvider.complete_json``) keeps the agents
-decoupled from any specific vendor. Adding OpenAI/Gemini/etc. is a new
-provider class — agent code never has to change.
-
-The deterministic provider is the **always-on** fallback: if no real
-provider is configured, or if the real provider fails, the orchestrator
-routes through deterministic rules per CLAUDE.md section 41.
-
-The provider contract is intentionally narrow:
-    complete_json(system: str, user: str, schema: type[T]) -> T
-
-The provider is responsible for asking the LLM to emit valid JSON, parsing
-the response, and validating it against the supplied Pydantic schema.
-Anything outside that contract fails fast — agents never see raw text.
-
-
-"""
 
 from __future__ import annotations
 
