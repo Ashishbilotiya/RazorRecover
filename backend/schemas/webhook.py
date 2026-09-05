@@ -1,31 +1,4 @@
-"""Pydantic schemas for Razorpay webhook payloads (normalized).
 
-Real Razorpay structure (verified against https://razorpay.com/docs/webhooks/payments/):
-    {
-      "entity": "event",
-      "account_id": "acc_...",
-      "event": "payment.failed",
-      "contains": ["payment"],
-      "payload": {
-        "payment": {
-          "entity": {
-            "id": "pay_...",
-            "amount": 1600,
-            "status": "failed",
-            "error_code": "BAD_REQUEST_ERROR",
-            ...
-          }
-        }
-      },
-      "created_at": 1569334395
-    }
-
-The HTTP header ``X-Razorpay-Signature`` carries an HMAC-SHA256 of the raw body
-signed with ``RAZORPAY_WEBHOOK_SECRET``. The optional ``X-Razorpay-Event-Id``
-header carries a delivery id suitable for idempotency.
-
-See CLAUDE.md sections 9, 25, 26.
-"""
 
 from __future__ import annotations
 
