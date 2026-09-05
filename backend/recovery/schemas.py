@@ -1,8 +1,4 @@
-"""Pydantic schemas for the recovery decision chain.
 
-These are the contract between policy, safeguards, executor, and the engine.
-Nothing else produces or consumes them.
-"""
 
 from __future__ import annotations
 
