@@ -1,8 +1,4 @@
-"""Recovery configuration — policy thresholds loaded from environment.
 
-The defaults match ``.env.example`` so the demo runs without configuration
-changes. Production should override via environment variables.
-"""
 
 from __future__ import annotations
 
