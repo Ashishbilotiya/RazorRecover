@@ -5,7 +5,7 @@ Coordinates ML inference and the three agents to produce an
 executes a recovery action — execution belongs to the Phase 4 policy
 engine + executor.
 
-See CLAUDE.md section 19 (orchestrator) and 41 (fallback strategy).
+
 """
 
 from __future__ import annotations
