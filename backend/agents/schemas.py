@@ -4,7 +4,6 @@ These are the contract between the agents, the orchestrator, and the future
 policy engine (Phase 4). The Phase 4 layer never has to handle free-form text —
 it consumes one of these models and applies deterministic rules.
 
-See CLAUDE.md sections 16, 17, 18, 20.
 """
 
 from __future__ import annotations
@@ -97,7 +96,7 @@ class TransactionContext(BaseModel):
 # Agent outputs
 # ---------------------------------------------------------------------------
 class RiskAssessment(BaseModel):
-    """Structured output from the Risk Agent (CLAUDE.md section 16)."""
+    """Structured output from the Risk Agent ."""
 
     model_config = ConfigDict(extra="forbid")
 
@@ -110,7 +109,7 @@ class RiskAssessment(BaseModel):
 
 
 class RootCauseAssessment(BaseModel):
-    """Structured output from the Root Cause Agent (CLAUDE.md section 17)."""
+    """Structured output from the Root Cause Agent """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -121,7 +120,7 @@ class RootCauseAssessment(BaseModel):
 
 
 class RecoveryRecommendation(BaseModel):
-    """Structured output from the Recovery Agent (CLAUDE.md section 18).
+    """Structured output from the Recovery Agent.
 
     This is a *recommendation*. The policy engine in Phase 4 — never the
     agent — decides whether it can be executed.
@@ -137,7 +136,7 @@ class RecoveryRecommendation(BaseModel):
 
 
 class AgentPipelineResult(BaseModel):
-    """Result returned by the orchestrator (CLAUDE.md section 19)."""
+    """Result returned by the orchestrator ."""
 
     model_config = ConfigDict(extra="forbid")
 
