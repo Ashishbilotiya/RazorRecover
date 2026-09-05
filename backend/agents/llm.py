@@ -15,7 +15,7 @@ The provider is responsible for asking the LLM to emit valid JSON, parsing
 the response, and validating it against the supplied Pydantic schema.
 Anything outside that contract fails fast — agents never see raw text.
 
-See CLAUDE.md sections 19, 20, 21, 41.
+
 """
 
 from __future__ import annotations
