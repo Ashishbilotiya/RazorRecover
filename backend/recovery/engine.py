@@ -1,23 +1,4 @@
-"""Recovery engine — coordinates Agent → Policy → Safeguards → Executor.
 
-This is the only module that wires all four layers together. It owns the
-database transaction (one commit per ``process()`` call) and emits the audit
-trail. The agent orchestrator only produces a recommendation; the recovery
-engine enforces the safety chain.
-
-CLAUDE.md invariants (section 21, 22, 23, 24):
-
-    LLM → Recommendation → Policy Engine → Safeguards → Executor → Razorpay
-
-The engine never lets the agent skip layers. Each layer produces a structured
-decision that the next layer consumes; nothing free-form controls downstream
-behavior.
-
-Concurrency note: ``process_for_transaction`` opens its own session via the
-caller-supplied ``session_factory`` so the engine composes with the API
-endpoints' FastAPI dependencies (Phase 5) and the demo scripts (Phase 8) the
-same way.
-"""
 
 from __future__ import annotations
 
