@@ -1,22 +1,4 @@
-"""Recovery Agent — recommends ONE recovery action.
 
-This agent only **recommends**. It never executes. Execution belongs to
-the policy engine + executor in Phase 4.
-
-Deterministic fallback rules (CLAUDE.md section 41):
-    IF failure_reason in {temporary_timeout, network_error}
-       AND recovery_probability >= 0.75
-       AND previous_retry_count < 3
-    THEN RETRY_PAYMENT
-    ELSE IF failure_reason in {card_declined, insufficient_funds, authentication_failed}
-       AND customer_success_rate is reasonable
-    THEN SUGGEST_ALTERNATE_PAYMENT_METHOD
-    ELSE IF amount is non-trivial AND customer has good history
-    THEN SEND_PAYMENT_LINK
-    ELSE IF low recovery_probability
-    THEN ESCALATE_TO_HUMAN
-    ELSE STOP
-"""
 
 from __future__ import annotations
 
