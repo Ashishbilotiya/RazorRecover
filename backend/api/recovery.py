@@ -5,7 +5,7 @@ The API never talks to Razorpay directly — only the engine's
 thin layer over ``backend.recovery.engine.RecoveryEngine`` plus repository
 reads.
 
-Endpoints (see CLAUDE.md section 42):
+
 
     GET    /api/recovery/cases
     GET    /api/recovery/cases/{case_id}
