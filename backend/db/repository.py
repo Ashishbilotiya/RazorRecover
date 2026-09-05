@@ -1,10 +1,3 @@
-"""Repository / data access layer. Keep query logic out of API handlers.
-
-Phase 4 adds :class:`RecoveryCaseRepository` and helpers for executing
-recovery actions idempotently. The repository never calls Razorpay.
-
-See CLAUDE.md coding rule 4.
-"""
 
 from __future__ import annotations
 
