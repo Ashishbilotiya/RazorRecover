@@ -1,8 +1,4 @@
-"""Transaction listing endpoint.
 
-Returns compact summaries of ingested Razorpay transactions. See
-CLAUDE.md section 42.
-"""
 
 from __future__ import annotations
 
