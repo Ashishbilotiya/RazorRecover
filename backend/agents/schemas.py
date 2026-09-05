@@ -1,10 +1,3 @@
-"""Pydantic schemas for the AI agent pipeline.
-
-These are the contract between the agents, the orchestrator, and the future
-policy engine (Phase 4). The Phase 4 layer never has to handle free-form text —
-it consumes one of these models and applies deterministic rules.
-
-"""
 
 from __future__ import annotations
 
