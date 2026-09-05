@@ -1,6 +1,4 @@
 """Pydantic schemas for transaction-related API boundaries.
-
-See CLAUDE.md coding rule 3.
 """
 
 from __future__ import annotations
