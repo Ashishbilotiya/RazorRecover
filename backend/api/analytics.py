@@ -1,8 +1,4 @@
-"""Analytics overview endpoint.
 
-Aggregates persisted data — no invented numbers, zero-on-empty. See CLAUDE.md
-sections 30, 31.
-"""
 
 from __future__ import annotations
 
