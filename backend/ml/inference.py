@@ -1,16 +1,4 @@
-"""Inference wrapper — loads the persisted model and returns predictions.
 
-Critical rule (CLAUDE.md sections 11, 21): ML predicts. Inference never
-calls Razorpay, never triggers actions, never bypasses policy. The recovery
-agent + policy engine consume its output.
-
-See CLAUDE.md section 11 example output::
-
-    {
-        "recovery_probability": 0.87,
-        "revenue_at_risk": 4350.0
-    }
-"""
 
 from __future__ import annotations
 
