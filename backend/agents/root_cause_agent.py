@@ -1,7 +1,7 @@
 """Root Cause Agent — classifies why the revenue was lost.
 
 The agent picks ONE category from the controlled vocabulary defined in
-``backend.agents.schemas.RootCauseCategory`` (CLAUDE.md section 17). It
+``backend.agents.schemas.RootCauseCategory``. It
 never picks an action, never calls Razorpay, and never invents facts.
 
 If the LLM is unavailable, the deterministic fallback classifies from the
