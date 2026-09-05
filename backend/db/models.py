@@ -1,12 +1,4 @@
-"""ORM models for RazorRecover.
 
-Phase 1 includes only the tables required for webhook ingestion + audit.
-`RecoveryCase` and `RecoveryAction` are declared here as skeletons so future
-phases do not require schema migration (see CLAUDE.md section 10).
-
-All models use UUID primary keys (string) for portability across PostgreSQL
-and SQLite test runs.
-"""
 
 from __future__ import annotations
 
