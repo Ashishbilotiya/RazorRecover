@@ -1,17 +1,3 @@
-"""Razorpay webhook ingestion endpoint.
-
-Flow:
-    1. Read raw body bytes (signature is computed over the raw body).
-    2. Verify HMAC-SHA256 signature against RAZORPAY_WEBHOOK_SECRET.
-    3. Parse envelope via Pydantic schema.
-    4. Idempotency check via ``WebhookEvent.external_event_id`` UNIQUE index.
-    5. Persist WebhookEvent + (optional) Transaction + audit log in one txn.
-    6. For ``payment.failed`` events with a normalized ``Transaction``, schedule
-       the recovery pipeline as a FastAPI ``BackgroundTasks`` job. The response
-       returns immediately; the pipeline runs after, with its own DB session.
-
-See CLAUDE.md sections 9, 26, 27, 41.
-"""
 
 from __future__ import annotations
 
