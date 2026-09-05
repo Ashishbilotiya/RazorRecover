@@ -1,13 +1,3 @@
-"""Audit logger — append-only decision trail.
-
-Every meaningful decision writes one row to ``audit_logs``. The writer accepts
-an open SQLAlchemy ``Session`` and flushes immediately so the caller is sure
-the record is persisted (used by the webhook flow which commits the whole
-transaction in one go).
-
-See CLAUDE.md section 27 — keep entries concise; never store private
-chain-of-thought, only structured ``decision`` + ``reason`` + ``metadata``.
-"""
 
 from __future__ import annotations
 
