@@ -1,9 +1,4 @@
-"""Recovery pipeline: policy engine, safeguards, executor, engine.
 
-See CLAUDE.md sections 21–24. Order of layers:
-
-    Agent Orchestrator → Policy → Safeguards → Executor → Razorpay (Test Mode)
-"""
 
 from backend.recovery.config import RecoveryConfig, load_config
 from backend.recovery.engine import ProcessResult, RecoveryEngine
