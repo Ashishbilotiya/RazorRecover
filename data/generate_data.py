@@ -1,18 +1,3 @@
-"""Synthetic payment / recovery dataset generator.
-
-Produces a deterministic, realistic dataset with logical relationships between
-features and the ground-truth recovery label.
-
-Rows represent failed payment attempts; the target ``recoverable`` answers:
-"would this transaction have eventually been recovered by a smart retry or
-payment-link workflow?". Per CLAUDE.md sections 11, 12, 14.
-
-Run:
-    PYTHONPATH=. python -m data.generate_data
-
-Output:
-    data/synthetic_transactions.csv
-"""
 
 from __future__ import annotations
 
