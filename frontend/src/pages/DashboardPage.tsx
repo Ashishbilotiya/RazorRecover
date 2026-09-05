@@ -2,7 +2,7 @@
 //
 // Owns the cross-cutting "open a case" state and the refreshKey counter that
 // increments after every approve/execute mutation. Children re-fetch on
-// refreshKey change; that is the entire refresh strategy (CLAUDE.md rule 12).
+// refreshKey change; that is the entire refresh strategy .
 
 import { useCallback, useState } from "react";
 import { Dashboard } from "../components/Dashboard";
