@@ -1,15 +1,4 @@
-"""Recovery model training.
 
-Pipeline:
-    ColumnTransformer (numeric + categorical preprocessing)
-        ↓
-    LogisticRegression(class_weight="balanced")
-
-A proper train/test split (stratified on the target) is used so the
-reported metrics reflect held-out performance.
-
-See CLAUDE.md sections 13, 32.
-"""
 
 from __future__ import annotations
 
