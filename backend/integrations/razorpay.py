@@ -1,15 +1,4 @@
-"""Razorpay integration — webhook signature verification + execution client.
 
-All Razorpay-specific logic is kept inside this module. Higher layers
-(webhook handler, recovery executor) consume these helpers without depending
-on the ``razorpay`` SDK directly.
-
-We deliberately implement signature verification with ``hmac`` (stdlib) instead
-of pulling in the SDK so it works identically in tests without the package
-being available.
-
-See CLAUDE.md sections 25, 26.
-"""
 
 from __future__ import annotations
 
