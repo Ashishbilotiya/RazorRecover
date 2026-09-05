@@ -1,14 +1,3 @@
-"""Feature engineering for the recovery prediction model.
-
-The pipeline here is saved alongside the model artifact so inference
-loads a single ``joblib.load(...)`` and never has to rebuild transformers.
-
-Schema is locked down in :data:`FEATURE_COLUMNS` so the dataset generator,
-training, and inference all agree on the same column set. Adding/removing a
-feature requires editing only this module.
-
-See CLAUDE.md section 12.
-"""
 
 from __future__ import annotations
 
