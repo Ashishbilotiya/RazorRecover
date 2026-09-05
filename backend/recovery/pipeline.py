@@ -1,13 +1,3 @@
-"""Pipeline trigger — runs the recovery engine outside the request scope.
-
-Used by ``backend/api/webhooks.py`` to dispatch the recovery pipeline as a
-``BackgroundTasks`` job after a ``payment.failed`` webhook has been
-normalized. The trigger opens its own SQLAlchemy session (the request
-session is closed by the time the background task runs) and never lets an
-exception propagate back into the HTTP response.
-
-See CLAUDE.md sections 9 (Event Ingestion) and 19 (Orchestrator).
-"""
 
 from __future__ import annotations
 
