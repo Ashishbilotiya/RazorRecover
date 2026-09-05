@@ -1,12 +1,4 @@
-"""Agent orchestrator.
 
-Coordinates ML inference and the three agents to produce an
-:class:`AgentPipelineResult`. This module NEVER calls Razorpay and NEVER
-executes a recovery action — execution belongs to the Phase 4 policy
-engine + executor.
-
-
-"""
 
 from __future__ import annotations
 
