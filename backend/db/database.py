@@ -1,10 +1,3 @@
-"""SQLAlchemy engine, session factory, and declarative base.
-
-Settings are read from environment variables via pydantic-settings.
-Never hard-code credentials.
-
-See CLAUDE.md sections 10, 38.
-"""
 
 from __future__ import annotations
 
