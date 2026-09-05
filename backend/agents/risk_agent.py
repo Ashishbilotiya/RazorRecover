@@ -18,7 +18,6 @@ If the LLM fails for any reason, the deterministic fallback produces an
 identical-schema RiskAssessment so the orchestrator never has to handle a
 text exception.
 
-See CLAUDE.md sections 16, 20, 21, 41.
 """
 
 from __future__ import annotations
