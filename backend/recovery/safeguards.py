@@ -1,17 +1,5 @@
-"""Safeguards — the gate between policy approval and executor execution.
 
-CLAUDE.md section 23:
-  - Idempotency
-  - Retry limits
-  - Amount limits
-  - Stopping rules
-  - Human escalation
 
-The safeguards module is *pure* with respect to side effects: it inspects the
-structured :class:`PolicyDecision` plus the transaction context, and the
-caller-provided callback that probes the database for prior actions. It
-returns a :class:`SafeguardDecision`. It never calls Razorpay.
-"""
 
 from __future__ import annotations
 
