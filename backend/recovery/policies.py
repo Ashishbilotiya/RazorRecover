@@ -1,32 +1,4 @@
-"""Policy engine — deterministic rules (CLAUDE.md section 22).
 
-Policies never depend on LLM interpretation. They receive the structured
-:class:`RecoveryRecommendation` and the :class:`TransactionContext`, plus the
-shared :class:`RecoveryConfig`, and return a deterministic
-:class:`PolicyDecision`.
-
-Rules (precedence order):
-
-1. ``STOP`` or ``payment already succeeded`` → REJECT / no-op.
-2. ``ESCALATE_TO_HUMAN`` is honored verbatim.
-3. Action not in the configured ``enabled_actions`` → REJECT.
-4. ``RETRY_PAYMENT`` rules:
-     - failure_reason in {temporary_timeout, network_error}
-     - recovery_probability >= confidence_threshold
-     - previous_retry_count < retry_limit
-5. ``SUGGEST_ALTERNATE_PAYMENT_METHOD`` rules:
-     - failure_reason in permanent set
-     - probability >= confidence_threshold
-6. ``SEND_PAYMENT_LINK`` rules:
-     - amount >= amount_escalation_limit
-     - previous_retry_count == 0
-7. ``SEND_REMINDER`` rules:
-     - customer-initiated failure
-     - probability >= 0.5
-8. ``CHECKOUT_RECOVERY`` rules:
-     - gateway degradation root cause
-9. Anything above :attr:`RecoveryConfig.max_payment_amount` → HUMAN_REVIEW.
-"""
 
 from __future__ import annotations
 
