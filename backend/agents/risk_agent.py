@@ -1,24 +1,3 @@
-"""Risk Agent — decides if a failed transaction is worth recovering.
-
-Pipeline:
-    ML inference (recovery_probability, revenue_at_risk)
-          ↓
-    Risk Agent (LLM optional, deterministic fallback mandatory)
-          ↓
-    RiskAssessment
-
-The agent:
-  - treats the ML signal as authoritative for `recovery_probability` and
-    `revenue_at_risk` (it never invents its own probability);
-  - may adjust the *confidence* in that probability based on business context;
-  - writes a short business reason;
-  - never calls Razorpay or selects an action.
-
-If the LLM fails for any reason, the deterministic fallback produces an
-identical-schema RiskAssessment so the orchestrator never has to handle a
-text exception.
-
-"""
 
 from __future__ import annotations
 
