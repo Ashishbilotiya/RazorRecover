@@ -1,23 +1,4 @@
-"""Recovery executor — the *only* module that talks to Razorpay.
 
-CLAUDE.md section 24:
-    Approved actions flow through here. Anything that failed the policy or
-    safeguard gate never reaches this code path. This module never contains
-    AI reasoning.
-
-Flow:
-    Recommendation
-        ↓
-    Policy Engine         (returns approved or rejected)
-        ↓
-    Safeguards Gate       (returns allowed or blocked)
-        ↓
-    Executor (this file)  (calls RazorpayClient.execute_action)
-        ↓
-    Razorpay (Test Mode)
-        ↓
-    ExecutionResult
-"""
 
 from __future__ import annotations
 
