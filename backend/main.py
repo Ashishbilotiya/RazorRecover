@@ -1,10 +1,3 @@
-"""FastAPI application entry point.
-
-Phase 1: health endpoint + Razorpay webhook ingestion.
-Phase 2+: additional routers registered under /api.
-
-See CLAUDE.md sections 9, 42, 50.
-"""
 
 from __future__ import annotations
 
