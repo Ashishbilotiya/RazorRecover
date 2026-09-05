@@ -1,15 +1,3 @@
-"""Model + business evaluation for the recovery model.
-
-Reports:
-    - Precision, Recall, F1, ROC-AUC, Confusion Matrix
-    - Revenue at Risk, Revenue Targeted, Estimated Recoverable Revenue
-    - Confusion matrix per business threshold
-
-The functions return dataclasses so tests can assert on values directly;
-``print_report`` formats a human-readable summary.
-
-See CLAUDE.md sections 13, 31.
-"""
 
 from __future__ import annotations
 
