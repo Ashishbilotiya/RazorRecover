@@ -1,6 +1,5 @@
 """Pydantic schemas for recovery-case and recovery-action API boundaries.
 
-See CLAUDE.md coding rule 3.
 """
 
 from __future__ import annotations
